@@ -7,13 +7,14 @@ import subprocess
 
 app_name = "C:/Program Files (x86)/AHS/VOICEROID+/YukariEX/VOICEROID.exe"
 
-def isVoiceRoidRunning(): # Check running exec/process by means of itasklist cmd
+def isVoiceRoidRunning(): # Check running exec/process by means of tasklist cmd
     procs = subprocess.Popen(
         "tasklist",
         stdout=subprocess.PIPE,
         shell=True,
-    ).communicate()[0].split(b"\\")
+    ).communicate()[0].split(b"\n")
     for proc in procs:
+        proc = proc.rstrip()
         if b"VOICEROID" in proc:
             print("Already started")
             return True
