@@ -70,11 +70,10 @@ class VoiceRoid(object):
 if __name__ == "__main__":
     import sys
     args = sys.argv
-    print(args)
 
     if not isVoiceRoidRunning(): # otherwise, start up VOICEROID by Popen
         p = subprocess.Popen(app_name)
-        time.sleep(6)
+        time.sleep(10)
 
     if 1 < len(args):
         voiceroid = VoiceRoid("VOICEROID＋ 結月ゆかり EX")
