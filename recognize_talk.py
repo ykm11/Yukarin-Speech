@@ -9,7 +9,7 @@ PORT = 10500
 
 if __name__ == "__main__":
 
-    if not isVoiceRoidRunning():
+    if not VoiceRoid.isVoiceRoidRunning():
         p = subprocess.Popen(app_name)
         time.sleep(10)
 
