@@ -16,6 +16,8 @@ if __name__ == "__main__":
     voiceroid = VoiceRoid("VOICEROID＋ 結月ゆかり EX")
     client = start_recognize(HOST, PORT)
 
+    # バッファに1バイトずつ貯めていって、<RECOGOUT>から</RECOGOUT>が得られたら
+    # 認識できた文章として出力
     buf = b""
     retrieving = False
     while True:

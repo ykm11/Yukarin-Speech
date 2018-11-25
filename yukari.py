@@ -99,4 +99,3 @@ if __name__ == "__main__":
 
     voiceroid = VoiceRoid("VOICEROID＋ 結月ゆかり EX")
     voiceroid.say(args.text)
-    #voiceroid.store(args.text)
